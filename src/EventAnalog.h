@@ -199,9 +199,16 @@ class EventAnalog {
     int16_t readVal = startVal;
     int16_t currentVal = startVal;
     int16_t previousVal = currentVal;
-    int16_t minVal = 100;
-    int16_t maxVal = 980;
-    int16_t startBoundary = 50;
+
+//    int16_t minVal = 100;
+//    int16_t maxVal = 980;
+
+	// 10/09/2023 SAG Changed to support Pots
+	int16_t minVal = 0;
+    int16_t maxVal = 1023;
+
+	
+	int16_t startBoundary = 50;
     int16_t endBoundary = 50;
 
     int16_t negativeIncrements = 25;
