@@ -89,9 +89,11 @@ void EventAnalog::setReadPos(int16_t offset) {
 
 void EventAnalog::setSliceNeg() {
   sliceNeg = max(((startVal-startBoundary-minVal-endBoundary)/negativeIncrements),1); //Never allow 0
+  //Serial.printf("sliceNeg [%i]\n", sliceNeg);
 }
 void EventAnalog::setSlicePos() {
   slicePos = max(((maxVal-endBoundary-startBoundary-startVal)/positiveIncrements),1);  //Never allow 0
+  //Serial.printf("slicePos [%i]\n", slicePos);
 }
 
 void EventAnalog::setStartValue(uint16_t val) {
